@@ -7,6 +7,7 @@ pagination, filters and sorting of the api in order to achieve the best practice
 ## DTO
 The dto is an object where only the attributes that the end user will need to interact with are considered.
 
+### User
 ```
 public class User{
   private String username;
@@ -25,15 +26,15 @@ Saving `User` entity `json`
 This would be the json to be sent as the body of the request to the user's post, but it is not correct to leave the isAdmin 
 field filled during the save, so the dto will be used to create an object with attributes necessary for the save process.
 
-### UserDto
+### UserDTO
 ```
-public class UserDto{
+public class UserDTO{
   private String username;
   private String name;
   private String password
 }
 
-Saving `DtoUser` entity `json`
+Saving `DTOUser` entity `json`
 
 "name":"Celso Momade",
 "username":"celso"
